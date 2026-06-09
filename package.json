@@ -1,0 +1,28 @@
+{
+  "name": "frontend-mentor-challenges",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for Frontend Mentor challenge solutions.",
+  "packageManager": "pnpm@10.26.1",
+  "scripts": {
+    "dev": "pnpm --filter @fm/home dev",
+    "dev:qr": "pnpm --filter @fm/qr-code-component dev",
+    "dev:social": "pnpm --filter @fm/social-links-profile dev",
+    "build": "pnpm --filter @fm/home build && pnpm --filter @fm/qr-code-component build && pnpm --filter @fm/social-links-profile build",
+    "preview": "vite preview --host 0.0.0.0 --outDir dist",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
