@@ -9,6 +9,24 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
+function getDistinctId(): string {
+  const key = "ph_distinct_id";
+  let id = sessionStorage.getItem(key);
+  if (!id) {
+    id = crypto.randomUUID();
+    sessionStorage.setItem(key, id);
+  }
+  return id;
+}
+
+function trackEvent(event: string, properties?: Record<string, unknown>): void {
+  fetch("/api/track", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ event, properties, distinctId: getDistinctId() }),
+  }).catch(() => {});
+}
+
 const challenges = [
   {
     label: "qr-code-component",
@@ -55,7 +73,14 @@ function HomePage() {
 
         <nav className="primary-links" aria-label="Challenges">
           {challenges.map((challenge) => (
-            <a className="text-link" href={challenge.href} key={challenge.href}>
+            <a
+              className="text-link"
+              href={challenge.href}
+              key={challenge.href}
+              onClick={() =>
+                trackEvent("challenge_visited", { challenge: challenge.label })
+              }
+            >
               {challenge.label}
             </a>
           ))}
@@ -66,6 +91,12 @@ function HomePage() {
             href="https://www.frontendmentor.io/"
             rel="noreferrer"
             target="_blank"
+            onClick={() =>
+              trackEvent("external_link_clicked", {
+                destination: "frontendmentor",
+                url: "https://www.frontendmentor.io/",
+              })
+            }
           >
             fm
           </a>
@@ -73,6 +104,12 @@ function HomePage() {
             href="https://github.com/angel-3535"
             rel="noreferrer"
             target="_blank"
+            onClick={() =>
+              trackEvent("external_link_clicked", {
+                destination: "github",
+                url: "https://github.com/angel-3535",
+              })
+            }
           >
             gh
           </a>
@@ -80,6 +117,12 @@ function HomePage() {
             href="https://www.thangel3535.com/"
             rel="noreferrer"
             target="_blank"
+            onClick={() =>
+              trackEvent("external_link_clicked", {
+                destination: "website",
+                url: "https://www.thangel3535.com/",
+              })
+            }
           >
             web
           </a>

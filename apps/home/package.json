@@ -12,6 +12,7 @@
     "@tailwindcss/vite": "latest",
     "@tanstack/react-router": "^1.170.10",
     "@vitejs/plugin-react": "latest",
+    "posthog-node": "^5.35.13",
     "react": "latest",
     "react-dom": "latest",
     "typescript": "latest",

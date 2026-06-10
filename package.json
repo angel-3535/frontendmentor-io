@@ -23,6 +23,7 @@
     "vite": "latest"
   },
   "dependencies": {
+    "posthog-node": "^5.35.13",
     "react": "latest",
     "react-dom": "latest"
   }
