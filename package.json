@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Monorepo for Frontend Mentor challenge solutions.",
-  "packageManager": "pnpm@10.26.1",
   "scripts": {
     "dev": "pnpm --filter @fm/home dev",
     "dev:blog": "pnpm --filter @fm/blog-preview-card dev",
