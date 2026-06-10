@@ -3,7 +3,7 @@ import {
   createRoute,
   createRouter,
   Outlet,
-  RouterProvider
+  RouterProvider,
 } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -12,30 +12,30 @@ import "./styles.css";
 const challenges = [
   {
     label: "qr-code-component",
-    href: "/challenges/qr-code-component/"
+    href: "/challenges/qr-code-component/",
   },
   {
     label: "blog-preview-card",
-    href: "/challenges/blog-preview-card/"
+    href: "/challenges/blog-preview-card/",
   },
   {
     label: "social-links-profile",
-    href: "/challenges/social-links-profile/"
-  }
+    href: "/challenges/social-links-profile/",
+  },
 ];
 
 const rootRoute = createRootRoute({
-  component: () => <Outlet />
+  component: () => <Outlet />,
 });
 
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: HomePage
+  component: HomePage,
 });
 
 const router = createRouter({
-  routeTree: rootRoute.addChildren([indexRoute])
+  routeTree: rootRoute.addChildren([indexRoute]),
 });
 
 declare module "@tanstack/react-router" {
@@ -62,13 +62,25 @@ function HomePage() {
         </nav>
 
         <footer className="site-footer">
-          <a href="https://www.frontendmentor.io/" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.frontendmentor.io/"
+            rel="noreferrer"
+            target="_blank"
+          >
             fm
           </a>
-          <a href="https://github.com/" rel="noreferrer" target="_blank">
+          <a
+            href="https://github.com/angel-3535"
+            rel="noreferrer"
+            target="_blank"
+          >
             gh
           </a>
-          <a href="https://www.thangel3535.com/" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.thangel3535.com/"
+            rel="noreferrer"
+            target="_blank"
+          >
             web
           </a>
         </footer>
@@ -80,5 +92,5 @@ function HomePage() {
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
