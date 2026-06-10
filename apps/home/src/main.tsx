@@ -15,6 +15,10 @@ const challenges = [
     href: "/challenges/qr-code-component/"
   },
   {
+    label: "blog-preview-card",
+    href: "/challenges/blog-preview-card/"
+  },
+  {
     label: "social-links-profile",
     href: "/challenges/social-links-profile/"
   }

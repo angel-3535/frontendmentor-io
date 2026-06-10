@@ -6,9 +6,10 @@
   "packageManager": "pnpm@10.26.1",
   "scripts": {
     "dev": "pnpm --filter @fm/home dev",
+    "dev:blog": "pnpm --filter @fm/blog-preview-card dev",
     "dev:qr": "pnpm --filter @fm/qr-code-component dev",
     "dev:social": "pnpm --filter @fm/social-links-profile dev",
-    "build": "pnpm --filter @fm/home build && pnpm --filter @fm/qr-code-component build && pnpm --filter @fm/social-links-profile build",
+    "build": "pnpm --filter @fm/home build && pnpm --filter @fm/blog-preview-card build && pnpm --filter @fm/qr-code-component build && pnpm --filter @fm/social-links-profile build",
     "preview": "vite preview --host 0.0.0.0 --outDir dist",
     "typecheck": "pnpm -r typecheck"
   },

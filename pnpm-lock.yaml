@@ -71,6 +71,37 @@ importers:
         specifier: latest
         version: 19.2.3(@types/react@19.2.16)
 
+  challenges/blog-preview-card:
+    dependencies:
+      '@tailwindcss/vite':
+        specifier: latest
+        version: 4.3.0(vite@8.0.16(@types/node@25.9.1)(jiti@2.7.0))
+      '@vitejs/plugin-react':
+        specifier: latest
+        version: 6.0.2(vite@8.0.16(@types/node@25.9.1)(jiti@2.7.0))
+      react:
+        specifier: latest
+        version: 19.2.7
+      react-dom:
+        specifier: latest
+        version: 19.2.7(react@19.2.7)
+      typescript:
+        specifier: latest
+        version: 6.0.3
+      vite:
+        specifier: latest
+        version: 8.0.16(@types/node@25.9.1)(jiti@2.7.0)
+    devDependencies:
+      '@types/node':
+        specifier: latest
+        version: 25.9.1
+      '@types/react':
+        specifier: latest
+        version: 19.2.16
+      '@types/react-dom':
+        specifier: latest
+        version: 19.2.3(@types/react@19.2.16)
+
   challenges/qr-code-component:
     dependencies:
       '@tailwindcss/vite':
