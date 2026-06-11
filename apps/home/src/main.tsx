@@ -40,6 +40,10 @@ const challenges = [
     label: "social-links-profile",
     href: "/challenges/social-links-profile/",
   },
+  {
+    label: "results-summary-component",
+    href: "/challenges/results-summary-component/",
+  },
 ];
 
 const rootRoute = createRootRoute({

@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+    --color-white: hsl(0 0% 100%);
+    --color-pale-blue: hsl(221 100% 96%);
+    --color-dark-gray-blue: hsl(224 30% 27%);
+    --color-light-lavender: hsl(241, 100%, 89%);
+
+    --color-reaction-red: hsl(0, 100%, 67%);
+    --color-reaction-red-light: hsl(0, 100%, 67%, 0.05);
+    --color-memory-yellow: hsl(39, 100%, 56%);
+    --color-memory-yellow-light: hsl(39, 100%, 56%, 0.05);
+    --color-verbal-green: hsl(166, 100%, 37%);
+    --color-verbal-green-light: hsl(166, 100%, 37%, 0.05);
+    --color-visual-blue: hsl(234, 85%, 45%);
+    --color-visual-blue-light: hsl(234, 85%, 45%, 0.05);
+
+    --color-slate-blue: hsl(252, 100%, 67%);
+    --color-royal-blue: hsl(241, 81%, 54%);
+
+    --color-violet-blue: hsla(256, 72%, 46%, 1);
+    --color-persian-blue: hsla(241, 72%, 46%, 0);
+
+    --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 2rem;
+    background: var(--color-pale-blue);
+    color: var(--color-dark-gray-blue);
+    font-family: var(--font-hanken-grotesk);
+}
+
+.card__totalscore {
+    background-image: linear-gradient(
+        var(--color-slate-blue),
+        var(--color-royal-blue) 80%
+    );
+}
+
+.total_score {
+    background-image: linear-gradient(
+        var(--color-violet-blue) /*top*/,
+        var(--color-persian-blue)
+    );
+}
+
+.card__summary {
+    background-color: var(--color-white);
+}
+
+.summary__title {
+    margin-bottom: 2rem;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    .stat__left {
+        display: flex;
+    }
+}
+
+.reaction {
+    background-color: var(--color-reaction-red-light);
+    color: var(--color-reaction-red);
+}
+
+.memory {
+    background-color: var(--color-memory-yellow-light);
+    color: var(--color-memory-yellow);
+}
+
+.verbal {
+    background-color: var(--color-verbal-green-light);
+    color: var(--color-verbal-green);
+}
+
+.visual {
+    background-color: var(--color-visual-blue-light);
+    color: var(--color-visual-blue);
+}
+
+.btn {
+    background-color: var(--color-dark-gray-blue);
+    color: var(--color-white);
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 3rem;
+}
