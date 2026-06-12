@@ -37,6 +37,10 @@ const challenges = [
     href: "/challenges/blog-preview-card/",
   },
   {
+    label: "product-preview-card-component",
+    href: "/challenges/product-preview-card-component/",
+  },
+  {
     label: "social-links-profile",
     href: "/challenges/social-links-profile/",
   },

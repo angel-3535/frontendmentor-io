@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+    /*### Primary*/
+    --color-green-500: hsl(158, 36%, 37%);
+    --color-green-700: hsl(158, 42%, 18%);
+    /*### Neutral*/
+    --color-black: hsl(212, 21%, 14%);
+    --color-grey: hsl(228, 12%, 48%);
+    --color-cream: hsl(30, 38%, 92%);
+
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-fraunces: "Fraunces", serif;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228 45% 44%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 2rem;
+    background-color: var(--color-cream);
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+}
