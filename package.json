@@ -6,11 +6,14 @@
   "scripts": {
     "dev": "pnpm --filter @fm/home dev",
     "dev:blog": "pnpm --filter @fm/blog-preview-card dev",
+    "dev:nft": "pnpm --filter @fm/nft-preview-card-component dev",
+    "dev:order": "pnpm --filter @fm/order-summary-component dev",
     "dev:product": "pnpm --filter @fm/product-preview-card-component dev",
     "dev:qr": "pnpm --filter @fm/qr-code-component dev",
     "dev:results": "pnpm --filter @fm/results-summary-component dev",
     "dev:social": "pnpm --filter @fm/social-links-profile dev",
-    "build": "pnpm --filter @fm/home build && pnpm --filter @fm/blog-preview-card build && pnpm --filter @fm/product-preview-card-component build && pnpm --filter @fm/qr-code-component build && pnpm --filter @fm/results-summary-component build && pnpm --filter @fm/social-links-profile build",
+    "dev:stats": "pnpm --filter @fm/stats-preview-card-component dev",
+    "build": "pnpm --filter @fm/home build && pnpm --filter @fm/blog-preview-card build && pnpm --filter @fm/nft-preview-card-component build && pnpm --filter @fm/order-summary-component build && pnpm --filter @fm/product-preview-card-component build && pnpm --filter @fm/qr-code-component build && pnpm --filter @fm/results-summary-component build && pnpm --filter @fm/social-links-profile build && pnpm --filter @fm/stats-preview-card-component build",
     "preview": "vite preview --host 0.0.0.0 --outDir dist",
     "typecheck": "pnpm -r typecheck"
   },

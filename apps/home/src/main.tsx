@@ -37,6 +37,14 @@ const challenges = [
     href: "/challenges/blog-preview-card/",
   },
   {
+    label: "nft-preview-card-component",
+    href: "/challenges/nft-preview-card-component/",
+  },
+  {
+    label: "order-summary-component",
+    href: "/challenges/order-summary-component/",
+  },
+  {
     label: "product-preview-card-component",
     href: "/challenges/product-preview-card-component/",
   },
@@ -47,6 +55,10 @@ const challenges = [
   {
     label: "results-summary-component",
     href: "/challenges/results-summary-component/",
+  },
+  {
+    label: "stats-preview-card-component",
+    href: "/challenges/stats-preview-card-component/",
   },
 ];
 
