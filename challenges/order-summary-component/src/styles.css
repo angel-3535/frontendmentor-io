@@ -1,10 +1,66 @@
 @import "tailwindcss";
 
+:root {
+    /*### Primary*/
+
+    --color-blue-100: hsl(225, 100%, 94%);
+    --color-blue-700: hsl(245, 75%, 52%);
+
+    /*### Neutral*/
+
+    --color-blue-50: hsl(225, 100%, 98%);
+    --color-gray-600: hsl(224, 23%, 55%);
+    --color-blue-950: hsl(223, 47%, 23%);
+
+    /*## Typography*/
+    --font-size-paragraph: 16px;
+
+    /*### Font*/
+    --font-family: "Red Hat Display", sans-serif;
+}
+
+@theme {
+    --color-blue-100: hsl(225, 100%, 94%);
+    --color-blue-700: hsl(245, 75%, 52%);
+
+    --color-blue-50: hsl(225, 100%, 98%);
+    --color-gray-600: hsl(224, 23%, 55%);
+    --color-blue-950: hsl(223, 47%, 23%);
+}
+
+.red-hat-display {
+    font-family: var(--font-family);
+}
+
 .attribution {
-  font-size: 0.6875rem;
-  text-align: center;
+    font-size: 0.6875rem;
+    text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 44%);
+}
+
+.page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 2rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--font-weight-300);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+@media (min-width: 768px) {
+    .page {
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+}
+
+body {
+    background-color: var(--color-gray-600);
 }
